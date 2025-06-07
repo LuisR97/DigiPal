@@ -1,0 +1,46 @@
+{
+    "name": "Experiment",
+    "maps": [
+        {
+            "name": "Map",
+            "id": "c4681093-6406-4a18-aeea-910229d94db9",
+            "actions": [
+                {
+                    "name": "Fire",
+                    "type": "Button",
+                    "id": "69d05a93-3631-4472-b6a9-554fb17fc31c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4178d594-1a91-469e-bd18-f97480aa45c9",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Sceme",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Sceme",
+            "bindingGroup": "Sceme",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}

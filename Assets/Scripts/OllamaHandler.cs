@@ -11,15 +11,22 @@ public class OllamaHandler : MonoBehaviour
     public TMP_InputField inputField;
     public string model = "";
     private List<ChatMessage> chatHistory;
-    IChatClient chatClient;
-    TextToSpeechHandler tts;
+    public IChatClient chatClient;
+    public TextToSpeechHandler tts;
     public AudioSource audioSource;
 
     void Start()
     {
-        chatClient = new OllamaChatClient(new Uri("http://localhost:11434/"), model);
+        try
+        {
+            chatClient = new OllamaChatClient(new Uri("http://localhost:11434/"), model);
+        }
+        catch (Exception e)
+        {
+            Debug.Log("Missing LLM model. Try running model(s) first");
+        }
         chatHistory = new();
-        chatHistory.Add(new ChatMessage(ChatRole.System, "SYSTEM: Respond to all user messages as if you were a the AI, JARVIS, from the Iron Man films."));
+        chatHistory.Add(new ChatMessage(ChatRole.System, "SYSTEM: Respond to all user messages in a casual tone. Do not include emojis in your response."));
     }
 
     public async void OnSubmit(string input)

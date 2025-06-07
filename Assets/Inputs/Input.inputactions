@@ -1,0 +1,46 @@
+{
+    "name": "Input",
+    "maps": [
+        {
+            "name": "map",
+            "id": "f38f04b6-e1ee-4e82-81e2-cb8ca074a15e",
+            "actions": [
+                {
+                    "name": "Record",
+                    "type": "Button",
+                    "id": "81f85385-ff62-4f65-a7ab-17e6b436cf5b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Hold(duration=0.4)",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "6ce0e425-2dcd-4319-97ae-53c24ed3faaf",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";DigiPalScheme",
+                    "action": "Record",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "DigiPalScheme",
+            "bindingGroup": "DigiPalScheme",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
